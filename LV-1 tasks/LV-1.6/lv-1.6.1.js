@@ -9,6 +9,24 @@ const fn = (arr) => {
     }
     return result;
 };
-
-fn();
 console.log(fn(arr));
+
+
+const fn2 = (arr) => {
+    const result = [];
+    arr.forEach(el => {
+        result.push(el ** 2)       
+    });
+    return result;
+};
+console.log(fn2(arr));
+
+
+const fn3 = (arr) => {
+    let result = 0;
+    arr.forEach(num => {
+        result += num ** 2;
+    })
+    return result;
+};
+console.log(fn3(arr));

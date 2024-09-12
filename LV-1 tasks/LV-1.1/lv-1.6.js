@@ -11,3 +11,7 @@ const fn = (word) => {
     return result;
 }
 fn('обь');
+
+const fn2 = (word) => console.log(word[word.length - 1] === 'ь' ? word[word.length - 2] : word[word.length - 1])
+
+fn2('обь');

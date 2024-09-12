@@ -3,8 +3,11 @@
 
 const fn = (str) => {
     if (str.length > 0) {
-        return str[str.length - 1]
+        return str[str.length - 2]
     }
 };
 
-fn('qw')
+fn('qw');
+
+const fn2 = (str) => console.log(str.length > 0 ? str[str.length -2] : ''); 
+fn2('qw');

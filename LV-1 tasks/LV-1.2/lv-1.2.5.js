@@ -9,4 +9,7 @@ const fn = (num1, num2) => {
         return false;
     }
 };
-fn(123, 125)
+fn(123, 125);
+
+const fn2 =(num1, num2) => Number(String(num1)[0]) === Number(String(num2)[0]);
+fn2(123, 125);
