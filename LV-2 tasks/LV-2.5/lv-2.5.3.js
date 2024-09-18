@@ -9,3 +9,11 @@ const fn = (arr) => {
     return odd / even;
 };
 console.log(fn(arr)); 
+
+const fn2 = (arr) => {
+    let even = 0;
+    let odd = 0;
+    arr.forEach(e => e % 2 === 0 ? even += e : odd += e);
+    return even / odd;
+};
+console.log(fn2(arr));
