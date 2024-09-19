@@ -7,9 +7,19 @@ const fn = (str) => str.split('').map((e, i)=> e == 0 ? i : '').filter(e => type
 console.log(fn(str));
 
 
-const fn2 = (str) => {
-    const result = [];
-    result.push(str.split('').reduce((acc, e, i) => Number(e) === 0 ?  acc + i + ',' : acc, 0));
-    return result;
+// const fn2 = (str) => {
+//     const result = [];
+//     result.push(str.split('').reduce((acc, e, i) => Number(e) === 0 ?  acc + i + ',' : acc, 0));
+//     return result;
+// };
+// console.log(fn2(str));
+
+const fn3 = (str) => {
+    return str.split('').reduce((acc, char, i) => {
+       if (Number(char) === 0) {
+        acc.push(i);   
+       }; 
+        return acc;
+    }, []);
 };
-console.log(fn2(str));
+console.log(fn3(str));

@@ -23,11 +23,6 @@ const date = '2025-12-31';
 
 const fn2 = (date) => {
   const [year, month, day] = date.split('-');
-  const result = {
-    year: year,
-    month: month,
-    day: day,
-  };
-    return result;
+  return { year, month, day};
 };
 console.log(fn2(date));
