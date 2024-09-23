@@ -8,7 +8,7 @@ const number = 12345;
 const fn = (number) => {
     const numberStr = String(number);
     const arr = [];
-    for (let i = 0; i < numberStr.length; i ++) {
+    for (let i = 0; i < numberStr.length; i += 1) {
         arr.push(numberStr[i]);
     }
     return arr;

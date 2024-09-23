@@ -23,3 +23,4 @@ const fn3 = (str) => {
     }, []);
 };
 console.log(fn3(str));
+

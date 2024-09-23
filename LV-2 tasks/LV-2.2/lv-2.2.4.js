@@ -8,10 +8,10 @@ const arr = [1, 2, 3, 4, 5, 6];
 const fn = (arr) => {
     let sum1 = 0;
     let sum2 = 0;
-    for (let i = 0; i < arr.length / 2; i++) {
+    for (let i = 0; i < arr.length / 2; i += 1) {
         sum1 += arr[i]; 
     }
-    for (let i = arr.length / 2; i < arr.length; i++) {
+    for (let i = arr.length / 2; i < arr.length; i += 1) {
         sum2 += arr[i]
     }
     return sum1 / sum2;
