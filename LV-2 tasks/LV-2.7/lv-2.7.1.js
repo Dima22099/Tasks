@@ -6,13 +6,12 @@ const str = 'a bc def ghij';
 
 // 'A BC DEF ghij'
 
-const fn = (str) => 
-    str.split(' ').reduce((acc, el) => {
-        if (el.length <= 3) {
-            acc += el.toUpperCase() + ' ';
-        } else {
-            acc += el + ' ';
-        }
-		return acc;
-    }, '');
-console.log(fn(str));
+const fn2 = (str) => {
+    const count = str.split(' ').filter(e => e.length <= 3);
+    let result = '';
+    for (let i = 0; i < count.length; i += 1) {
+        result += count[i].toUpperCase() + ' ';
+    };
+    return result;
+};
+console.log(fn2(str));

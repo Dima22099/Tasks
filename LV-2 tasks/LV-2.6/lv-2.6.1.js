@@ -2,6 +2,10 @@
 
 const str = 'qwerty123099';
 
-const fn2 = (str) => str.split('').map((e, i) => Number(e) ? i : '').filter(Boolean);
-console.log(fn2(str));
+const fn = (str) => str.split('').map((e, i) => Number(e) ? i : '').filter(Boolean);
+console.log(fn(str));
 
+
+const fn2 = (str) => 
+    str.split('').reduce((acc, el, i) => !Number.isNaN(Number(el)) ? acc + i : acc, []);
+console.log(fn2(str));

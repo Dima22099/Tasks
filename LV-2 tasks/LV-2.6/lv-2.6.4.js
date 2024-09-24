@@ -14,5 +14,5 @@ const fn = (str) =>
 		}
         return acc;
     }
-    , []);
+    , '');
 console.log(fn(str));

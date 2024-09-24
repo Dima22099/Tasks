@@ -12,4 +12,18 @@ const fn = (str) => str.split('').reverse().reduce((acc, char, i) => {
 		acc += char;
     return acc;
 }, '').split('').reverse().join('');
-console.log(fn(str)); 
+// console.log(fn(str)); 
+
+
+const fn2 = (str) => {
+  let result = '' ;
+  for (let i = str.length - 1; i >= 0; i -= 1) {
+    if (i % 3 === 0) {
+      result = str[i] + " " + result;
+    } else {
+    result = str[i] + result;
+    }
+  } 
+  return result.trim();
+};
+console.log(fn2(str));

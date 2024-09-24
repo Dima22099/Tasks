@@ -1,19 +1,15 @@
 // Дан некоторый массив с числами, например, вот такой:
 
-const arr = [1, 2, 3, 4, 5, 6];
+const arr = [3, 1, 23, 9, 6, 12];
 // Слейте пары элементов вместе:
 
-// [12, 34, 56]
+// [31, 239, 612]
 
 const fn = (arr) => 
 arr.reduce((acc, num, i) => {
-    if (i % 2 !== 0) {
-        acc.push(Number(`${num - 1}${num}`));
+    if ((i + 1) % 2 === 0) {
+        acc.push(Number(`${arr[i - 1]}${num}`));
     }
     return acc; 
 }, []) 
 console.log(fn(arr));
-
-// const fn = (arr) => 
-//     arr.reduce((acc, num, i) => i % 2 !== 0 ? acc.push(Number(`${num - 1}${num}`)) : acc, []);
-// console.log(fn(arr));

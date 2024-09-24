@@ -6,7 +6,7 @@ const number = 123789;
 // 28
 const fn = (number) => 
     Number(String(number).split('').reduce((acc, num) => {
-        if (num % 2 === 0) {
+        if (Number(num) % 2 === 0) {
             acc += num;
         }
         return acc;

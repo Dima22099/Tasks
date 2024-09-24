@@ -13,3 +13,17 @@ console.log(fn(arr));
 // 		return acc;
 //     }, 0));
 //     console.log(fn(arr));
+
+
+const fn2 = (arr) => {
+    let prevEl = 0;
+    let result = 0;
+    for (let i = 1; i < arr.length; i += 1) {
+        prevEl = arr[i - 1];
+        if (arr[i] === prevEl) {
+            result = i;
+        }
+    };
+    return result > 0;
+};
+console.log(fn2(arr));
