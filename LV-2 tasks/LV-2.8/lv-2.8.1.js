@@ -7,6 +7,9 @@ const fn = (str) =>
         if (char === char.toUpperCase()) {
             acc += 1;
         }
+         if (acc > 3) {
+            return false;
+         }
         return acc;
     }, 0) > 2;
     console.log(fn(str));
