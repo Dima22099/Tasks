@@ -2,11 +2,12 @@
 
 const fn = () => {
     let result = [];
-    for (let i = 1; i < Math.random() * 100; i++) {
+    for (let i = 1; i < 100; i += 1) {
         result.push(Math.floor(Math.random() * 100));
     };
-    result = result.filter(el => el > 0);
     return result;
 };
 
 console.log(fn());
+// Кол-во итерация фиксированное
+// Фильтр не нужен

@@ -2,12 +2,13 @@
 // сумма первой и второй цифры которых равна пяти.
 
 const fn = (number) => {
-    let result = 0;
-    for (let i = 10; i < 1000; i++) {
+    let result = [];    
+    for (let i = 10; i < 500; i += 1) {
         let firstNum = String(i)[0];
-        let middleNum = String(i)[1];
-        if (parseInt(firstNum) + parseInt(middleNum) === 5) {
-            result += `${i};`;
+        let secondNum = String(i)[1];
+
+        if ((Number(firstNum) + Number(secondNum)) === 5) {
+            result.push(i);
         }
     }
     return result;

@@ -7,8 +7,7 @@ let arr2 = [4, 5, 6];
 // [1, 2, 3, 4, 5, 6]
 
 const fn = (arr1, arr2) => {
-    const res = [...arr1, ...arr2];
-    return res
+    return [...arr1, ...arr2];
 };
 
 console.log(fn(arr1, arr2));
