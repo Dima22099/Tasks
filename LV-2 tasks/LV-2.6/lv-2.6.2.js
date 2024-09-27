@@ -5,9 +5,6 @@ const arr = [123, 456, 789];
 
 // [321, 654, 987]
 
-const fn = (arr) => {
-    const result = [];
-    result.push(arr.reverse(Boolean));
-    return result;
-};
+const fn = (arr) =>
+    arr.map(num => Number(String(num).split('').reverse().join('')))
 console.log(fn(arr));
