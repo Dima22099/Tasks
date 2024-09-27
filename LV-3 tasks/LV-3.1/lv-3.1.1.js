@@ -3,16 +3,17 @@
 // const number = 4523;
 const number = 456;
 
-const fn = (number) => {
-    let prevNum = Number(String(number)[0]) - 1;
-    let result = true;
-    String(number).split('').forEach(num => {
-        if (Number(num) - prevNum === 1) {
-	        prevNum = Number(num);
+const fn2 = (number) => {
+    const strNumber = String(number);
+    let temp = 0;
+
+    for (let i = 0; i < strNumber.length - 1; i += 1) {
+        if (Number(strNumber[i + 1] - Number(strNumber[i]))  === 1) {
+            temp = Number(strNumber[i]);
         } else {
-            result = false;
+            return false;
         }
-    }); 
-    return result;
+    }
+    return true;
 };
-console.log(fn(number));
+console.log(fn2(number));

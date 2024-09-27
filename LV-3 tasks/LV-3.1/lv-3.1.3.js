@@ -7,5 +7,5 @@ const arr =
 ];
 // Отсортируйте элементы в каждом подмассиве.
 
-const fn = (arr) => arr.map(el => el.sort(a, b))
+const fn = (arr) => arr.map(el => el.sort())
 console.log(fn(arr));
