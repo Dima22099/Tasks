@@ -12,15 +12,4 @@ const fn = (arr) => {
 };
 console.log(fn(arr));
 
-// const fn = (arr) => Boolean(arr.reduce((acc, el, i) => el === arr[i +1] ? acc += 1 : acc += 0, 0));
-// console.log(fn(arr));
-
-// const fn = (arr) => 
-// 	Boolean(arr.reduce((acc, el, i) => {
-//         if (el === arr[i +1]) {
-//             acc += 1;
-//         }
-// 		return acc;
-//     }, 0));
-//     console.log(fn(arr));
 

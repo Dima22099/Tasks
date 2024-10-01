@@ -2,15 +2,14 @@
 const char = '-';
 
 const fn = (char) => {
-    let result = '';
     if (char === char.toUpperCase()) {
-        result += true;
+		return true;
     }
-    return Boolean(result);
+	return false;
 }; 
 console.log(fn(char));
 
 
 
-const fn2 = (char) => char === char.toUpperCase() ? true : false;
+const fn2 = (char) => char === char.toUpperCase();
 console.log(fn2(char));

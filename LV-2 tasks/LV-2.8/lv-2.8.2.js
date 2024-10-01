@@ -12,5 +12,5 @@ const fn = (str) =>
             acc += num + ' ';
         };
         return acc;
-    }, []).trim();
+    }, '').trim();
 console.log(fn(str));

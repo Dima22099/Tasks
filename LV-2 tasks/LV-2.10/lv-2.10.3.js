@@ -6,5 +6,5 @@ const str = 'abcde abcde abcde';
 // '!bcde !bcde !bcde'
 
 const fn = (str) => 
-    str.split(' ').reduce((acc, subStr) => acc += subStr[0] = '!' + subStr.slice(1), '');
+    str.split(' ').reduce((acc, subStr) => acc += '!' + subStr.slice(1) + ' ', '').trim();
 console.log(fn(str));
