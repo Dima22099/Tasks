@@ -12,7 +12,7 @@ const str = 'QwErTy';
                 return false;
             }
         };
-        return count < 2;
+        return count;
     };
     console.log(fn2(str));
 
