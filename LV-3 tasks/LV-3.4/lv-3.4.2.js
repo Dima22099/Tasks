@@ -6,13 +6,10 @@ const arr = [1, 2, 3, 4, 5, 6];
 // [2, 1, 4, 3, 6, 5]
 
 const fn = (arr) => {
-    const result = [];
-    arr.reduce((acc, el, i) => {
-        if (i % 2 !== 0) {
-            acc.push(...acc, el);
-        } else {
-            acc.push(el, ...acc)
-        }
-    }, []);
+    let result = [];
+    for (let i = 0; i < arr.length - 1; i += 2) {
+        result.push(arr[i + 1], arr[i]);
+    } 
+    return result;
 };
 console.log(fn(arr));

@@ -17,17 +17,13 @@ const fn = (str) => {
 			word = '';
 			continue;
 		}
-		
-		if (word === '') {
-			word += (wordsCount % 2 !== 0) ? '' : str[i];
-		} else {
-			word += str[i];	
+		if (wordsCount % 2 === 0) {
+			word += str[i];
 		}
 	}
-	
 	result += word;
-	
 	return result;
-};
+};        
 
 console.log(fn(str));
+ 
