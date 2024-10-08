@@ -6,10 +6,11 @@ let num = 12345;
 const fn = (num) => {
     const strNum = String(num); 
     for (let i = 0; i < strNum.length; i += 1) {
-        if (strNum[i] <= 0) {
+        if (strNum[i] === 0) {
             return false;
         }
     }   
     return true;
 };
 console.log(fn(num)); // не понимать что здесь вообще происходит, i выдает не пойми что
+// числа записываются в другой системем исчесления
