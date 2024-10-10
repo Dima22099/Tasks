@@ -2,8 +2,8 @@
 
 const arr = [20, 23, 25, 30, 33, 34, 43, 50, 15, 80, 90];
 
-const fn2 = (arr) => arr.filter(el => String(el).indexOf(0) > -1);
-console.log(fn(arr));
+const fn2 = (arr) => arr.filter(el => String(el).includes(3));
+console.log(fn2(arr));
 
 // const fn = (arr) => {
 //     const result = [];

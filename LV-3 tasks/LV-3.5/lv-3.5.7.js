@@ -42,10 +42,10 @@ let obj = {
 
 const fn = (obj) => {
     let result = 0;
-    const arr = Object.values(obj).map(el => {
-        for (e of Object.values(el)) {
-            for (newEl of Object.values(e)) {
-            result += newEl;
+    	Object.values(obj).forEach(currentValue => {
+        for (value of Object.values(currentValue)) {
+            for (index of Object.values(value)) {
+            result += index;
             }
         }
     })
