@@ -4,7 +4,7 @@ const number = 120;
 
 const fn = (number) => {
     const result = [];
-    for (let i = 2; i < 120; i += 1) {
+    for (let i = 2; i < number; i += 1) {
         if (number % i === 0) {
             result.push(i);
         }

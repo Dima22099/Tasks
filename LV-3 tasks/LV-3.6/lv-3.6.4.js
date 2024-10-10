@@ -21,7 +21,13 @@ const data = [
 
 const fn = (data) => {
     let result = 0;
-    data.forEach(el => Object.values(el).map(i => result += i));
+    data.forEach(el => Object.values(el).forEach(i => result += i));
     return result;
 };
 console.log(fn(data));
+
+// const fn2 = (data) => 
+// 	data.forEach(el => Object.values(el).reduce((acc, value) => {
+// 		acc += value;
+// 	}, 0));
+// console.log(fn2(data));

@@ -19,7 +19,7 @@ let obj = {
 }
 // Найдите сумму элементов этого объекта.
 const fn = (obj) => {
-        let result = 0;
+	let result = 0;
   for (elem of Object.values(obj)) {
     for (el of Object.values(elem)) {
       result += el;
