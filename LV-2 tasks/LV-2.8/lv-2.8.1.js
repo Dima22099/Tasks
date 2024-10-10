@@ -16,4 +16,3 @@ const str = 'QwErTy';
     };
     console.log(fn2(str));
 
-

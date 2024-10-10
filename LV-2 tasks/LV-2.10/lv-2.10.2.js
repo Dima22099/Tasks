@@ -5,13 +5,12 @@ const fn = (number) => Number(String(number).split('').reverse().find(num => num
 console.log(fn(number));
 
 const fn2 = (number) => {
-    const num = String(number);
-    let result = 0;
-    for (let i = num.length; i >= 0; i -= 1) {
-        if (num[i] % 2 === 0) {
-            result += Number(num[i]);
-            return result;
+    const str = String(number);
+    for (let i = str.length; i > 0; i -= 1) {
+        if (Number(str[i]) % 2 === 0) {
+            return Number(str[i]);
         }
-    };
-};
-console.log(fn2(number));
+	}
+	return false;
+};      
+console.log(fn2(number));     

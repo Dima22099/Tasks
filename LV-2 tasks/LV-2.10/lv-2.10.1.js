@@ -3,17 +3,20 @@
 const str = 'A123TY797';
 
 const fn = (str) => 
-    str.split('').reduce((acc, char) => Number(char) ? acc : acc += 1 , 0) > 3;
+    str.split('').reduce((acc, char) => Number(char) ? acc += 0 : acc += 1 , 0) > 3;
 console.log(fn(str));
+
 
 const fn2 = (str) => {
     let count = 0;
-    for (let i = 0; i <= str.length - 1; i += 1) {
-        if (!Number(str[i])) {
+    for (let i = 0; i < str.length; i += 1) {
+        if (Number.isNaN(Number(str[i]))) {
             count += 1;
-            console.log(str[i])
         }
-    };
-    return count > 3;
+        if (count === 3) {
+            return count;
+        }
+    }
+    return count;
 };
 console.log(fn2(str));
