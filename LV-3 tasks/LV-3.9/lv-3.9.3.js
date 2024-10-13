@@ -4,7 +4,7 @@ const arr = [120, 200, 3900, 5600, 34, 67, 8];
 const fn = (arr) => {
     let result = [];
     for (let i = 0; i < arr.length; i += 1) {
-        if (String(arr[i]).indexOf('00') === -1) {
+        if (String(arr[i]).includes('00')) {
             result.push(arr[i]);
         }
     }

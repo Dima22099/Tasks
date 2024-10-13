@@ -1,11 +1,12 @@
 // Дана строка в формате:
 
-const str = 'snake_case';
+const str = 'snake_case_test_str';
 // Преобразуйте ее в формат:
 
 // 'camelCase'
 
-const fn = (str) => str.split('_').reduce((acc, el, i) => (i % 2 !== 0) ? acc += el[0].toUpperCase() + el.slice(1) : acc += el, '');
+const fn = (str) => str.split('_').reduce((acc, el, i) => (acc !== '') ? acc += el[0]
+.toUpperCase() + el.slice(1) : acc += el, '');
 console.log(fn(str));
 
 

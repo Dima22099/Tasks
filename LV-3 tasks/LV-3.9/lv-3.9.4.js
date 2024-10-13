@@ -3,10 +3,11 @@
 const fn = () => {
     const result = [];
     for (let i = 12; i < 1000; i += 1) {
-        if (String(i).split('').map(Number).reduce((a, b) => {
-            return a + b}, 0) === 13)  {
-                result.push(i); 
-            }
+        const temp = String(i).split('').map(Number).reduce((a, b) => {
+            return a + b}, 0);
+        if (temp === 13) {
+            result.push(i); 
+        }
     }
     return result;
 };
