@@ -7,14 +7,12 @@
 // ]
 
 const fn = () => {
-    for (let i = 0; i <= 1; i += 1) {
-        const result = [];
-        for (let j = 0; j <= 3; j += 1) {
-            const count = [];
-            count.push(j);
-        } 
-        result.push(count);
-    }
+    const result = [];
+    for (let j = 0; j <= 3; j += 1) {
+        const count = [];
+        count.push(j);
+    } 
+    result.push(count);
     return result;
 };
 console.log(fn());
