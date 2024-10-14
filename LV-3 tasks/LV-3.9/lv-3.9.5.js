@@ -7,12 +7,19 @@
 // ]
 
 const fn = () => {
+    const rows = 3;
+    const cols = 3;  
     const result = [];
-    for (let j = 0; j <= 3; j += 1) {
-        const count = [];
-        count.push(j);
+    let temp = 0;
+
+    for (let i = 1; i <= rows; i += 1) {
+        const arr = [];
+        for (let j = 1; j <= cols; j += 1) {
+            temp += 1;
+            arr.push(temp);
+        } 
+        result.push(arr);
     } 
-    result.push(count);
     return result;
 };
 console.log(fn());
