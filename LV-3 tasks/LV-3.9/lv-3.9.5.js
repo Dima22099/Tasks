@@ -5,10 +5,10 @@
 // 	[4, 5, 6],
 // 	[7, 8, 9],
 // ]
+const rows = 3;
+const cols = 3;  
 
-const fn = () => {
-    const rows = 3;
-    const cols = 3;  
+const fn = (rows, cols) => {
     const result = [];
     let temp = 0;
 
@@ -22,4 +22,4 @@ const fn = () => {
     } 
     return result;
 };
-console.log(fn());
+console.log(fn(rows, cols));
