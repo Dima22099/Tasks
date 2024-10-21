@@ -7,17 +7,20 @@
 // 	min: 1,
 // }
 
-const arr = [8, 9, 12, 212, 23, 45, 56,];
+const arr = [8, 9, 1, 12, 212, 23, 45, 56,];
 
 const fn = (arr) => {
-    let result = {};
-  arr.forEach((item, i, arrNum) => {
-    if (item < arr[i + 1]) {
-      result.min = item;
-    } else if (item > arrNum[i + 1]) {
-      result.max = item;
-    }
-  })
+    let result = {
+        max: arr[0],
+        min: arr[0],
+};
+    arr.forEach(item => {
+        if (result.min > item) {
+            result.min = item;
+        } else if (result.max < item) {
+            result.max = item;
+        }
+    })
   return result;
 }
-console.log(fn(arr));// не доделал еще
+console.log(fn(arr));

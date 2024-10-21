@@ -1,8 +1,11 @@
 // Сделайте функцию, которая будет возвращать сколько дней осталось до конца текущего месяца.
 
 const fn = () => {
-    const date = '31.12.2024';
+    const getYear = new Date().getFullYear();
+    const getMonth = new Date().getMonth() + 1;
+    const getDate = new Date(getYear, getMonth, 0).getTime();
+  
     const currentDate = new Date().getTime();
-    return Math.floor((new Date(date.split('.').reverse()).getTime() - currentDate) / 1000 / 60 / 60 / 24);
+    return Math.floor((getDate - currentDate) / 1000 / 60 / 60 / 24) + ' days';
 };
 console.log(fn());
