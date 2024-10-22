@@ -3,7 +3,7 @@
 
 const date = '24.06.1991';
 
-const fn = (date) => {
+const findOutZodiacSign = (date) => {
   const [day, month] = date.split('.');
   const zodiacSign = {
     '01': { borderDay: 20, before: 'Козерог', after: 'Водолей', },
@@ -21,8 +21,8 @@ const fn = (date) => {
   };
   if (zodiacSign[month].borderDay > day) {
     return zodiacSign[month].before;
-  } else if (zodiacSign[month].borderDay < day) {
+  } 
     return zodiacSign[month].after;
-  }
+  
 };
-console.log(fn(date));
+console.log(findOutZodiacSign(date));

@@ -9,7 +9,6 @@ const fn = (num) => {
             count.push(i)
         }
     };
-    count = count.length === 2;
-    return count;
+    return count.length === 2;
 };
 console.log(fn(num));
