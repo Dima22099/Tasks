@@ -23,6 +23,5 @@ const findOutZodiacSign = (date) => {
     return zodiacSign[month].before;
   } 
     return zodiacSign[month].after;
-  
 };
 console.log(findOutZodiacSign(date));

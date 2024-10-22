@@ -4,7 +4,8 @@
 
 const date = '20.10.2024';
 const fn = (date) => {
-    const newFormateDate = date.split('.').reverse().join(', ');
-    console.log(newFormateDate);
+    const valueDay = new Date(date.split('.').reverse()).getTime();
+    const currentDay = new Date().getTime();
+    return valueDay - currentDay < 1 ? ' ' + 'until this date' : ' ' + 'days left';
 };
 console.log(fn(date));
