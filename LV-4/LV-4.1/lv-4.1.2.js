@@ -4,7 +4,7 @@
 const day = '15.10.2024';
 
 const fn = (day) => {
-  const date = new Date(day.split('.').reverse().join(','));
+  const date = new Date(...day.split('.').reverse());
   const days = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
   return days[date.getDay()]  
 };
