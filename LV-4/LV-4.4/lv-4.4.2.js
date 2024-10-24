@@ -1,9 +1,9 @@
-// Сделайте функцию, которая параметром будет получать дату,
-//  а возвращать знак зодиака, соответствующий этой дате.
+// Сделайте функцию, которая параметром будет принимать дату, 
+// а возвращать знак зодиака, соответствующий этой дате.
 
 const date = '24.06.1991';
 
-const findOutZodiacSign = (date) => {
+const fn = (date) => {
   const [day, month] = date.split('.');
   const zodiacSign = {
     '01': { borderDay: 20, before: 'Козерог', after: 'Водолей', },
@@ -21,7 +21,8 @@ const findOutZodiacSign = (date) => {
   };
   if (zodiacSign[month].borderDay > day) {
     return zodiacSign[month].before;
-  } 
+  } else if (zodiacSign[month].borderDay < day) {
     return zodiacSign[month].after;
+  }
 };
-console.log(findOutZodiacSign(date));
+console.log(fn(date));
