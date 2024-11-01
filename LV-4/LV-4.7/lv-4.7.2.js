@@ -7,11 +7,11 @@ const arr2 = [2, 4, 55, 6, 8, 10];
 
 const getArrayCommonEl = (arr1, arr2) => {
     const result = [];
-    const whichOneIsLonger = arr1 > arr2 ? arr1 : arr2;  
-    const whichIsShorter = arr1 < arr2 ? arr1 : arr2;
-    for (let i = 0; i <= whichIsShorter.length; i += 1) {
-        if (whichOneIsLonger.includes(whichIsShorter[i])) {
-            result.push(whichIsShorter[i])
+    const longer = arr1 > arr2 ? arr1 : arr2;  
+    const shorter = longer === arr1 ? arr2 : arr1;
+    for (let i = 0; i <= shorter.length; i += 1) {
+        if (longer.includes(shorter[i])) {
+            result.push(shorter[i])
         }
     }
     return result;

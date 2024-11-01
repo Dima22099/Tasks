@@ -12,9 +12,9 @@ const getRandomChar = (to, from) => {
     const randomNum = Math.floor(Math.random() * (from - to));
     return lengthArray(to, from).reduce((acc, el, i) => {
         if (i < randomNum) {
-            acc.push(String.fromCharCode(Math.round(Math.random() * 100)));
+            acc.push(String.fromCharCode(Math.round(Math.random() * (from - to) + to)));
         } 
         return acc;
     }, []);
-};
-console.log(getRandomChar(65, 120));
+};  
+console.log(getRandomChar(65, 90));

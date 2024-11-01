@@ -1,11 +1,11 @@
 // Сделайте функцию, которая параметром будет 
 // принимать массив и элемент и возвращать следующий за ним элемент. Смотрите пример:
 
-const arr = [1, 2, 3, 4, 5];
-const num = 3;
+const arr = [5, 4, 3, 2, 1];
+const num = 4;
 // func(arr, 1); // 2
 // func(arr, 4); // 5
 // func(arr, 5); // 1
 
-const getElement = (arr, num) => arr[num + 1]
+const getElement = (arr, num) => num <= arr.length && arr[num];
 console.log(getElement(arr, num));

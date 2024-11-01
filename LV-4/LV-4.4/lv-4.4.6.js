@@ -1,12 +1,12 @@
 // Сделайте функцию, которая заполнит массив N случайными числами из заданного промежутка.
 
-const getRandomNum = (to, from) => Math.floor(Math.random() * (from -to));
+const getRandomNum = (min, max) => Math.floor(Math.random() * (max - min + 1));
 
-const fn = (to, from) => {
+const fn = (min, max) => {
   const result = [];
-  const random = getRandomNum();
+  const random = getRandomNum(min, max);
   for (let i = 0; i <= random; i += 1) {
-    result.push(getRandomNum());
+    result.push(getRandomNum(min, max));
   }
   return result;
 }
