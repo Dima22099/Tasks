@@ -6,7 +6,5 @@ const getSquare = (num) => Math.pow(num, 2);
 document.addEventListener('focusout', (e) => {
     const currentInput = e.target.id;
     const currentInputValue = e.target.value;
-    if (currentInput === e.target.id) {
-        document.querySelector('#' + currentInput).value = getSquare(currentInputValue);
-    }
+    document.querySelector('#' + currentInput).value = getSquare(currentInputValue);
 });

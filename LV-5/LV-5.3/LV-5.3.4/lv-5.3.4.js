@@ -6,5 +6,6 @@ const input = document.querySelector('#input');
 const button = document.querySelector('#button');
 
 button.addEventListener('click', (e) => {
-    input.value = input.value.split('').reverse().join('');
+    paragraph.textContent = input.value.split('').reverse().join('');
+    input.value = '';
 });

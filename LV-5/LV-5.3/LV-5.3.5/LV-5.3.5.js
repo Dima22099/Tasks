@@ -3,9 +3,8 @@
 const button = document.querySelector('#button');
 
 button.addEventListener('click', (e) => {
-    const countParagraph = Array.from(document.body.childNodes);
-    const resultParagr = countParagraph.filter((item) => item.tagName === 'P');
-    for (let i = 1; i <= resultParagr.length; i += 1) {
+    const countParagraph = document.querySelectorAll('p');
+    for (let i = 1; i <= countParagraph.length; i += 1) {
         document.querySelector('#p' + i).textContent = i;
     }
 });
