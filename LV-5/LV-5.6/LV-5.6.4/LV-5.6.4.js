@@ -5,7 +5,6 @@ const rectangle = document.querySelector('.rectangle');
 const btn = document.querySelector('.rectangleX2');
 
 btn.addEventListener('click', (e) => {
-    console.log('getAttribute', rectangle.getAttribute(width));
-    // rectangle.style.width = 200;
-    // rectangle.setAttribute('style', width )
+    rectangle.style.width = rectangle.getBoundingClientRect().width * 2 + 'px';
+    rectangle.style.height = rectangle.getBoundingClientRect().height * 2 + 'px';
 });
