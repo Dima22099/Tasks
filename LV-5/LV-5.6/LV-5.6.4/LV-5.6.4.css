@@ -1,0 +1,10 @@
+.rectangle {
+    /* left: auto;
+    top: auto;
+    display: block; */
+
+    width: 100px;
+    height: 200px;
+    border: 1px solid;
+    background-color: blueviolet;
+}
